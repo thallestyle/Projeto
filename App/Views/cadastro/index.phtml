@@ -1,0 +1,39 @@
+<?php $this->render('common/header'); ?>
+<div class="page-header">
+    <h1><strong>Cadastro de Pessoa</strong></h1>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <form action="<?=url()->route('cadastro.salvar');?>" method="post" class="form-horizontal" role="form">
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="textinput">Nome:</label>
+                    <div class="col-sm-6">
+                        <input name="nome" type="text" placeholder="Nome" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="textinput">Email:</label>
+                    <div class="col-sm-6">
+                        <input name="email" type="email" placeholder="Email" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="pull-left">
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+                <?php if(session()->has('_sucesso')): ?>
+                    <div class="alert alert-success" role="alert"><?=session()->getAndRemove('_sucesso');?></div>
+                <?php endif;  ?>
+                <?php if(session()->has('_erro')): ?>
+                    <div class="alert alert-warning" role="alert"><?=session()->getAndRemove('_erro');?></div>
+                <?php endif;  ?>    
+            </fieldset>
+        </form>
+        <a class="btn btn-info" href="<?=url()->route('index');?>">Voltar</a>
+    </div>
+</div>
+<?php $this->render('common/footer'); ?>
