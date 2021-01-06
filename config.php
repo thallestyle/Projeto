@@ -1,4 +1,5 @@
 <?php
+// teste 06/01/2020
 // Caminho dos arquivos de visão
 Container::set('app.view.path', __DIR__ . '/App/Views/');
 
