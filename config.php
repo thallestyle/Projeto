@@ -1,4 +1,6 @@
 <?php
+
+// teste thalles
 // Caminho dos arquivos de visão
 Container::set('app.view.path', __DIR__ . '/App/Views/');
 
