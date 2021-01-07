@@ -1,8 +1,6 @@
 <?php
 
 // Autoload
-
-// teste thallles 06/01/2021
 spl_autoload_register(function($class) {
 
     $ds = DIRECTORY_SEPARATOR;
